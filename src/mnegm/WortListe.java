@@ -1,33 +1,69 @@
 package mnegm;
 
+/**
+ * Die Klasse WortListe repräsentiert eine Liste von WortEintrag-Objekten.
+ * * @author Maged Negm
+ *  * @version 2-10-2023
+ */
 public class WortListe {
     private WortEintrag[] woerter;
 
+    /**
+     * Konstruktor für die Klasse WortListe. Erzeugt ein Array von WortEintrag-Objekten mit der angegebenen Größe.
+     *
+     * @param a Die Größe des Arrays für die WortEinträge. Muss größer als 0 sein; falls nicht, wird die Größe auf 2 gesetzt.
+     */
     public WortListe(int a) {
-        if(a <= 0)
+        if (a <= 0)
             a = 2;
         this.woerter = new WortEintrag[a];
     }
 
-    public void addWord(String word,String url) {
-        for (int i = 0; i < woerter.length; i++){
-            if(woerter[i].getWord() == null && woerter[i].getUrl() == null){
+    /**
+     * Fügt ein neues WortEintrag-Objekt zur Liste hinzu.
+     *
+     * @param word Das Wort für den Eintrag.
+     * @param url  Die URL für den Eintrag.
+     */
+    public void addWord(String word, String url) {
+        for (int i = 0; i < woerter.length; i++) {
+            if (woerter[i].getWord() == null && woerter[i].getUrl() == null) {
                 woerter[i].setWord(word);
                 woerter[i].setUrl(url);
             }
         }
     }
-    public WortEintrag getEintragAt(int index){
-        if(!(woerter.length > index)) throw new IndexOutOfBoundsException("Index out of bounds");
+
+    /**
+     * Gibt den WortEintrag an der angegebenen Position in der Liste zurück.
+     *
+     * @param index Der Index des gewünschten WortEintrag-Objekts.
+     * @return Das WortEintrag-Objekt an der angegebenen Position.
+     * @throws IndexOutOfBoundsException Wenn der Index außerhalb des gültigen Bereichs liegt.
+     */
+    public WortEintrag getEintragAt(int index) {
+        if (!(woerter.length > index)) throw new IndexOutOfBoundsException("Index out of bounds");
         return woerter[index];
     }
+
+    /**
+     * Gibt die Anzahl der Einträge in der Liste zurück.
+     *
+     * @return Die Anzahl der Einträge in der Liste.
+     */
     public int getLength() {
         return woerter.length;
     }
 
-    public boolean deleteWord(String word){
-        for (int i = 0; i < woerter.length; i++){
-            if(woerter[i].getWord().equals(word)){
+    /**
+     * Löscht ein Wort aus der Liste.
+     *
+     * @param word Das zu löschende Wort.
+     * @return true, wenn das Wort erfolgreich gelöscht wurde, andernfalls false.
+     */
+    public boolean deleteWord(String word) {
+        for (int i = 0; i < woerter.length; i++) {
+            if (woerter[i].getWord().equals(word)) {
                 woerter[i] = null;
                 woerter[i] = null;
                 return true;
@@ -36,14 +72,17 @@ public class WortListe {
         return false;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String toString() {
         String text = "";
-        for (int i = 0; i < woerter.length; i++){
-            if(woerter[i] == null)
+        for (int i = 0; i < woerter.length; i++) {
+            if (woerter[i] == null)
                 text += "<leer>\n";
             else
-                text+= woerter[i].toString() + "\n";
+                text += woerter[i].toString() + "\n";
         }
         return text;
     }
