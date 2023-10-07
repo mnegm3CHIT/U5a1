@@ -28,15 +28,11 @@ public class WortEintrag {
      * @param word Das Wort für den Eintrag.
      */
     public void setWord(String word) {
-        try {
             if (word != null && word.length() >= 2)
                 this.word = word;
             else
                 throw new IllegalArgumentException();
-        } catch (IllegalArgumentException e) {
-            JOptionPane.showMessageDialog(null, "Ungültiges Wort");
         }
-    }
 
     /**
      * Setzt die URL für den Eintrag. Die URL muss den Anforderungen der Methode checkURL entsprechen.
@@ -44,14 +40,10 @@ public class WortEintrag {
      * @param url Die URL für den Eintrag.
      */
     public void setUrl(String url) {
-        try {
             if (checkURL(url))
                 this.url = url;
             else
                 throw new IllegalArgumentException();
-        } catch (IllegalArgumentException e) {
-            JOptionPane.showMessageDialog(null, "Ungültige Url");
-        }
     }
 
     /**
