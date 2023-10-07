@@ -8,8 +8,8 @@ import javax.swing.*;
  *  * @version 2-10-2023
  */
 public class WortEintrag {
-    private String word; // Das Wort
-    private String url;  // Die URL
+    private String word;
+    private String url;
 
     /**
      * Konstruktor für die Klasse WortEintrag.
@@ -61,7 +61,8 @@ public class WortEintrag {
      * @return true, wenn die URL den Anforderungen entspricht, ansonsten false.
      */
     public static boolean checkURL(String url) {
-        return ((url.startsWith("https://") || url.startsWith("http://")) && (url.contains("//[a-zA-Z]\\.([a-zA-Z])")));
+        String pattern = "^(http://|https://)[a-zA-Z]+\\.[a-zA-Z]+$";
+        return url.matches(pattern);
     }
 
     /**
