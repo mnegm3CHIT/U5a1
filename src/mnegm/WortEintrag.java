@@ -89,6 +89,6 @@ public class WortEintrag {
      */
     @Override
     public String toString() {
-        return "WortEintrag{" + "word='" + word + '\'' + "; url='" + url + '\'' + '}';
+        return word+";"+url;
     }
 }
