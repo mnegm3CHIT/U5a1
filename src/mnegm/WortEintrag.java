@@ -53,7 +53,7 @@ public class WortEintrag {
      * @return true, wenn die URL den Anforderungen entspricht, ansonsten false.
      */
     public static boolean checkURL(String url) {
-        String pattern = "^(http://|https://)[a-zA-Z]+\\.[a-zA-Z]+$";
+        String pattern = "^(http://|https://)[a-zA-Z]+\\.[a-zA-Z]+\\.[a-zA-Z]+/[a-zA-Z]+$";
         return url.matches(pattern);
     }
 

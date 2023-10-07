@@ -27,11 +27,25 @@ public class WortListe {
      */
     public void addWord(String word, String url) {
         for (int i = 0; i < woerter.length; i++) {
-            if (woerter[i].getWord() == null && woerter[i].getUrl() == null) {
-                woerter[i].setWord(word);
-                woerter[i].setUrl(url);
+            if (woerter[i] == null) {
+                woerter[i] = new WortEintrag(word, url);
+                break;
+            }
+            if (i == woerter.length - 1) {
+                this.enlarge(new WortEintrag(word, url));
+                break;
             }
         }
+    }
+
+    public void enlarge(WortEintrag we) {
+        WortEintrag[] x = new WortEintrag[woerter.length+1];
+
+        for(int i = 0; i < woerter.length; i++) {
+            x[i] = woerter[i];
+        }
+        x[x.length-1] = we;
+        woerter = x;
     }
 
     /**
@@ -64,7 +78,6 @@ public class WortListe {
     public boolean deleteWord(String word) {
         for (int i = 0; i < woerter.length; i++) {
             if (woerter[i].getWord().equals(word)) {
-                woerter[i] = null;
                 woerter[i] = null;
                 return true;
             }

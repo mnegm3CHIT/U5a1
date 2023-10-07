@@ -45,11 +45,11 @@ public class WortTrainer {
     /**
      * Überprüft, ob das gegebene Wort mit dem Wort im aktuellen WortEintrag übereinstimmt (Groß-/Kleinschreibung beachten).
      *
-     * @param wort Das zu überprüfende Wort.
+     * @param word Das zu überprüfende Wort.
      * @return true, wenn das Wort korrekt ist, andernfalls false.
      */
-    public boolean check(String wort) {
-        if (wort.equals(currentwe.getWord()))
+    public boolean check(String word) {
+        if (word.equals(currentwe.getWord()))
             return true;
         return false;
     }
@@ -57,11 +57,11 @@ public class WortTrainer {
     /**
      * Überprüft, ob das gegebene Wort mit dem Wort im aktuellen WortEintrag übereinstimmt (ohne Groß-/Kleinschreibung zu beachten).
      *
-     * @param wort Das zu überprüfende Wort.
+     * @param word Das zu überprüfende Wort.
      * @return true, wenn das Wort korrekt ist, andernfalls false.
      */
-    public boolean checkIgnoreCase(String wort) {
-        if (wort.toLowerCase().equals(currentwe.getWord().toLowerCase()))
+    public boolean checkIgnoreCase(String word) {
+        if (word.toLowerCase().equals(currentwe.getWord().toLowerCase()))
             return true;
         return false;
     }
