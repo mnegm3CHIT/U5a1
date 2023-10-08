@@ -9,17 +9,17 @@ import java.util.Random;
  */
 public class WortTrainer {
     private WortListe wordlist;     // Die Liste von WortEintrag-Objekten für das Training.
-    private WortEintrag currentwe; // Der aktuelle WortEintrag, der im Training verwendet wird.
+    private WortEintrag cwe; // Der aktuelle WortEintrag, der im Training verwendet wird.
 
     /**
      * Konstruktor für die Klasse WortTrainer.
      *
      * @param wordlist   Die Liste von WortEintrag-Objekten für das Training.
-     * @param currentwe Der aktuelle WortEintrag, der im Training verwendet wird.
+     * @param cwe Der aktuelle WortEintrag, der im Training verwendet wird.
      */
-    public WortTrainer(WortListe wordlist, WortEintrag currentwe) {
+    public WortTrainer(WortListe wordlist, WortEintrag cwe) {
         this.wordlist = wordlist;
-        this.currentwe = currentwe;
+        this.cwe = cwe;
     }
 
     /**
@@ -38,8 +38,8 @@ public class WortTrainer {
      *
      * @return Der aktuelle WortEintrag.
      */
-    public WortEintrag getWortEintrag() {
-        return currentwe;
+    public WortEintrag getCwe() {
+        return cwe;
     }
 
     /**
@@ -49,7 +49,7 @@ public class WortTrainer {
      * @return true, wenn das Wort korrekt ist, andernfalls false.
      */
     public boolean check(String word) {
-        if (word.equals(currentwe.getWord()))
+        if (word.equals(cwe.getWord()))
             return true;
         return false;
     }
@@ -61,7 +61,7 @@ public class WortTrainer {
      * @return true, wenn das Wort korrekt ist, andernfalls false.
      */
     public boolean checkIgnoreCase(String word) {
-        if (word.toLowerCase().equals(currentwe.getWord().toLowerCase()))
+        if (word.toLowerCase().equals(cwe.getWord().toLowerCase()))
             return true;
         return false;
     }
