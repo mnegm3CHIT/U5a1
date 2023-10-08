@@ -34,7 +34,7 @@ public class WortTest {
         System.out.println(wortListe);
 
         // Testen der Klasse WortTrainer
-        WortTrainer trainer = new WortTrainer(wortListe, eintrag2);
+        WortTrainer trainer = new WortTrainer(wortListe, eintrag2, new WortStatistik(0,0));
         WortEintrag randomEintrag = trainer.random();
         System.out.println("Zufälliger WortEintrag: " + randomEintrag);
 
@@ -51,5 +51,6 @@ public class WortTest {
         } else {
             System.out.println("Falsches Wort (ohne Groß-/Kleinschreibung) eingegeben.");
         }
+        System.out.println(trainer.getWs().toString());
     }
 }

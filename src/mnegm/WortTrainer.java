@@ -8,18 +8,21 @@ import java.util.Random;
  * @version 2-10-2023
  */
 public class WortTrainer {
-    private WortListe wordlist;     // Die Liste von WortEintrag-Objekten für das Training.
-    private WortEintrag cwe; // Der aktuelle WortEintrag, der im Training verwendet wird.
+    private WortListe wordlist;
+    private WortEintrag cwe;
+    private WortStatistik ws;
 
     /**
      * Konstruktor für die Klasse WortTrainer.
      *
      * @param wordlist   Die Liste von WortEintrag-Objekten für das Training.
      * @param cwe Der aktuelle WortEintrag, der im Training verwendet wird.
+     * @param ws Der aktuelle WortEintrag, der im Training verwendet wird.
      */
-    public WortTrainer(WortListe wordlist, WortEintrag cwe) {
+    public WortTrainer(WortListe wordlist, WortEintrag cwe, WortStatistik ws) {
         this.wordlist = wordlist;
         this.cwe = cwe;
+        this.ws = ws;
     }
 
     /**
@@ -38,8 +41,17 @@ public class WortTrainer {
      *
      * @return Der aktuelle WortEintrag.
      */
-    public WortEintrag getCwe() {
+    public WortEintrag getWortEintrag() {
         return cwe;
+    }
+
+    /**
+     * Gibt die aktuelle WortStatistik zurück, der im Training verwendet wird.
+     *
+     * @return Die aktuelle WortStatistik.
+     */
+    public WortStatistik getWs() {
+        return ws;
     }
 
     /**
@@ -49,8 +61,11 @@ public class WortTrainer {
      * @return true, wenn das Wort korrekt ist, andernfalls false.
      */
     public boolean check(String word) {
-        if (word.equals(cwe.getWord()))
+        if (word.equals(cwe.getWord())) {
+            ws.addR();
             return true;
+        }
+        ws.addF();
         return false;
     }
 
@@ -61,8 +76,11 @@ public class WortTrainer {
      * @return true, wenn das Wort korrekt ist, andernfalls false.
      */
     public boolean checkIgnoreCase(String word) {
-        if (word.toLowerCase().equals(cwe.getWord().toLowerCase()))
+        if (word.toLowerCase().equals(cwe.getWord().toLowerCase())) {
+            ws.addR();
             return true;
+        }
+        ws.addF();
         return false;
     }
 }
