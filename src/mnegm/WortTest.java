@@ -5,7 +5,7 @@ package mnegm;
  * @author Maged Negm
  * @version 2023-10-08
  */
-public class Main {
+public class WortTest {
     public static void main(String[] args) {
         // Testen der Klasse WortEintrag
         WortEintrag eintrag1 = new WortEintrag("Hund", "https://www.beispiel.de/hund");
