@@ -14,9 +14,6 @@ public class WortTest {
         // Testen der Klasse WortListe
         WortListe wortListe = new WortListe(2);
         wortListe.addWord("Katze", "https://www.beispiel.at/katze");
-        wortListe.addWord("Haus", "https://www.beispiel.at/haus");
-        wortListe.addWord("Haus", "https://www.beispiel.at/haus");
-        wortListe.addWord("Haus", "https://www.beispiel.at/haus");
 
         System.out.println("WortListe:");
         System.out.println(wortListe);

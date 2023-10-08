@@ -77,7 +77,7 @@ public class WortListe {
      */
     public boolean deleteWord(String word) {
         for (int i = 0; i < woerter.length; i++) {
-            if (woerter[i].getWord().equals(word)) {
+            if (woerter[i] != null && woerter[i].getWord().equals(word)) {
                 woerter[i] = null;
                 return true;
             }
