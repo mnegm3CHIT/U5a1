@@ -33,7 +33,8 @@ public class WortTrainer {
     public WortEintrag random() {
         Random r = new Random();
         int index = r.nextInt(wordlist.getLength() - 1);
-        return wordlist.getEintragAt(index);
+        this.cwe = wordlist.getEintragAt(index);
+        return this.cwe;
     }
 
     /**
