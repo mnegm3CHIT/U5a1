@@ -84,4 +84,7 @@ public class WortTrainer {
         ws.addF();
         return false;
     }
+    public String toString() {
+        return this.wordlist.toString()+ "---\n"+this.ws.toString();
+    }
 }
