@@ -10,7 +10,6 @@ import java.util.Scanner;
  * @author Maged Negm
  * @version 2023-10-20
  */
-
 public class WortSL extends IOException {
     private WortTrainer trainer;
     private final String FILENAME = "C:\\Users\\Maged\\OneDrive\\Schule\\Schuljahr 2022 2024\\SEW\\U5a1\\WortTrainer.txt";
