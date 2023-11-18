@@ -4,63 +4,89 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ce7e254-b778-41f8-b32b-461a4345870b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/U5a1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="9ce7e254-b778-41f8-b32b-461a4345870b" name="Changes" comment="Wortpattern für regex verbessert">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mnegm/WortSL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mnegm/WortSL.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="schritt3" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2WCWC5TPmL0dplU3KNeRzEiZ8cZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "openjdk-20",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Maged/OneDrive/Schule/Schuljahr 2022 2024/SEW/U5a0&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Application.WortTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="mnegm.Main" />
       <module name="U5a1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WortTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mnegm.WortTest" />
+      <module name="U5a1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mnegm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WortTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -74,8 +100,187 @@
       <option name="presentableId" value="Default" />
       <updated>1696236482741</updated>
       <workItem from="1696236483630" duration="420000" />
-      <workItem from="1696236915444" duration="682000" />
+      <workItem from="1696236915444" duration="3895000" />
+      <workItem from="1696245112062" duration="221000" />
+      <workItem from="1696265440942" duration="1128000" />
+      <workItem from="1696277542811" duration="3741000" />
+      <workItem from="1696284762976" duration="65000" />
+      <workItem from="1696703523428" duration="12545000" />
+      <workItem from="1696784283150" duration="8395000" />
+      <workItem from="1696798337581" duration="1995000" />
+      <workItem from="1696838485580" duration="3817000" />
+      <workItem from="1697021729328" duration="278000" />
+      <workItem from="1697397838270" duration="100000" />
+      <workItem from="1697398622841" duration="196000" />
+      <workItem from="1697447259634" duration="1000" />
+      <workItem from="1697820822802" duration="854000" />
+      <workItem from="1697990503814" duration="585000" />
+      <workItem from="1699262016336" duration="71000" />
+      <workItem from="1699262103994" duration="658000" />
+      <workItem from="1699265006638" duration="1270000" />
+      <workItem from="1699373773512" duration="3000" />
+      <workItem from="1699858779965" duration="1000" />
+      <workItem from="1700068130978" duration="3604000" />
+      <workItem from="1700126592306" duration="4775000" />
+      <workItem from="1700254121034" duration="1357000" />
+      <workItem from="1700322618320" duration="14227000" />
     </task>
+    <task id="LOCAL-00001" summary="Anfang">
+      <option name="closed" value="true" />
+      <created>1696237658481</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696237658481</updated>
+    </task>
+    <task id="LOCAL-00002" summary="WortEintrag, WortListe und WortTrainer erstellt und definiert">
+      <created>1696283357164</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696283357164</updated>
+    </task>
+    <task id="LOCAL-00003" summary="WortEintrag, WortListe und WortTrainer Dokumentationskommentare gemacht">
+      <created>1696283767266</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696283767266</updated>
+    </task>
+    <task id="LOCAL-00004" summary="checkUrl verbessert">
+      <created>1696705535897</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696705535897</updated>
+    </task>
+    <task id="LOCAL-00005" summary="toString verbessert">
+      <created>1696705716140</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696705716140</updated>
+    </task>
+    <task id="LOCAL-00006" summary="try catch entfernt in WortEintrag">
+      <created>1696709015036</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696709015036</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Testklasse erstellen, addWord verbessert, enlarge Methode hinzugefügt,">
+      <created>1696720625326</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696720625326</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Testklasse umbenannt auf WortTest">
+      <created>1696784401279</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696784401279</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Variablen besser benannt">
+      <created>1696785264871</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696785264871</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Worttrainer_Schritt2: WortStatistik erttellt">
+      <created>1696795048241</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696795048241</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Worttrainer_Schritt2: verfeinerungen">
+      <created>1696796916224</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696796916224</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Worttrainer_Schritt2: Dokumentationskommentare">
+      <created>1696797093683</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696797093683</updated>
+    </task>
+    <task id="LOCAL-00013" summary="random Methode verbessert">
+      <created>1696841215192</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696841215192</updated>
+    </task>
+    <task id="LOCAL-00014" summary="hh">
+      <created>1697821139375</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1697821139375</updated>
+    </task>
+    <task id="LOCAL-00015" summary="toString methode hinzugefügt">
+      <created>1700129457814</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700129457814</updated>
+    </task>
+    <task id="LOCAL-00016" summary="speichern Methode verbessert">
+      <created>1700131881916</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1700131881916</updated>
+    </task>
+    <task id="LOCAL-00017" summary="fehlermeldungen zur speichern Methode hinzugefügt">
+      <created>1700327030616</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1700327030616</updated>
+    </task>
+    <task id="LOCAL-00018" summary="speichern Methode mit Fehlermeldung und einlesen funktion hinzugefügt">
+      <created>1700329132112</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1700329132112</updated>
+    </task>
+    <task id="LOCAL-00019" summary="laden Methode erweitert und und eine laden methode ohne Parameter hinzugefügt">
+      <created>1700334276892</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1700334276892</updated>
+    </task>
+    <task id="LOCAL-00020" summary="addWord mit Worteintrag-Parameter hinzugefügt">
+      <created>1700337145335</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1700337145335</updated>
+    </task>
+    <task id="LOCAL-00021" summary="WortTest erweitert, Funktionalität bei null-Worteinträgen hinzugefügt">
+      <created>1700337416599</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1700337416599</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Wortpattern für regex verbessert">
+      <created>1700339148657</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1700339148657</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,10 +291,66 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="schritt3" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="schritt2" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Anfang" />
+    <MESSAGE value="WortEintrag, WortListe und WortTrainer erstellt und definiert" />
+    <MESSAGE value="WortEintrag, WortListe und WortTrainer Dokumentationskommentare gemacht" />
+    <MESSAGE value="checkUrl verbessert" />
+    <MESSAGE value="toString verbessert" />
+    <MESSAGE value="try catch entfernt in WortEintrag" />
+    <MESSAGE value="Testklasse erstellen, addWord verbessert, enlarge Methode hinzugefügt," />
+    <MESSAGE value="Testklasse umbenannt auf WortTest" />
+    <MESSAGE value="Variablen besser benannt" />
+    <MESSAGE value="Worttrainer_Schritt2: WortStatistik erttellt" />
+    <MESSAGE value="Worttrainer_Schritt2: verfeinerungen" />
+    <MESSAGE value="Worttrainer_Schritt2: Dokumentationskommentare" />
+    <MESSAGE value="random Methode verbessert" />
+    <MESSAGE value="hh" />
+    <MESSAGE value="toString methode hinzugefügt" />
+    <MESSAGE value="speichern Methode verbessert" />
+    <MESSAGE value="fehlermeldungen zur speichern Methode hinzugefügt" />
+    <MESSAGE value="speichern Methode mit Fehlermeldung und einlesen funktion hinzugefügt" />
+    <MESSAGE value="laden Methode erweitert und und eine laden methode ohne Parameter hinzugefügt" />
+    <MESSAGE value="addWord mit Worteintrag-Parameter hinzugefügt" />
+    <MESSAGE value="WortTest erweitert, Funktionalität bei null-Worteinträgen hinzugefügt" />
+    <MESSAGE value="Wortpattern für regex verbessert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wortpattern für regex verbessert" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
