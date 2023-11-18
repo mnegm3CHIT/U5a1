@@ -8,7 +8,7 @@ import java.util.Random;
  * @version 2-10-2023
  */
 public class WortTrainer {
-    private WortListe wordlist;
+    private WortListe wl;
     private WortEintrag cwe;
     private WortStatistik ws;
 
@@ -20,7 +20,7 @@ public class WortTrainer {
      * @param ws Der aktuelle WortEintrag, der im Training verwendet wird.
      */
     public WortTrainer(WortListe wordlist, WortEintrag cwe, WortStatistik ws) {
-        this.wordlist = wordlist;
+        this.wl = wordlist;
         this.cwe = cwe;
         this.ws = ws;
     }
@@ -32,8 +32,8 @@ public class WortTrainer {
      */
     public WortEintrag random() {
         Random r = new Random();
-        int index = r.nextInt(wordlist.getLength() - 1);
-        this.cwe = wordlist.getEintragAt(index);
+        int index = r.nextInt(wl.getLength() - 1);
+        this.cwe = wl.getEintragAt(index);
         return this.cwe;
     }
 
@@ -85,6 +85,6 @@ public class WortTrainer {
         return false;
     }
     public String toString() {
-        return this.wordlist.toString()+ "---\n"+this.ws.toString();
+        return this.wl.toString()+ "\n--\n"+this.ws.toString();
     }
 }

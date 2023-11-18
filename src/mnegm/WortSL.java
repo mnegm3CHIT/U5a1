@@ -33,7 +33,20 @@ public class WortSL extends IOException {
         speichern(this.filename);
     }
 
-    public WortTrainer laden(String filename) {
+    public WortTrainer laden(String filename) throws IOException, IllegalArgumentException {
+        File file = new File(filename);
+        if(!file.exists()){
+            throw new FileNotFoundException("Diese Datei existiert nicht!");
+        }
+        if(!file.canRead()){
+            throw new IllegalArgumentException("Diese Datei kann nicht gelesen werden! - Du hast nicht die Berechtigung!");
+        }
+        String text = null;
+        try (Scanner s = new Scanner(new BufferedReader(new FileReader(filename)))) {
+            while (s.hasNext()) {
+                text += s.next();
+            }
+        }
 
     }
 }
