@@ -48,5 +48,22 @@ public class WortSL extends IOException {
             }
         }
 
+        String[] part = text.split("\n-----\n");
+        String[] e = part[0].split("\n");
+        String[] s = part[1].split("^[a-zA-Z0-9 ()]+$");
+
+        WortListe wl = new WortListe(1);
+        for(String ce : e) {
+            String[] teil = ce.split(";");
+            wl.addWord(teil[0], teil[1]);
+        }
+
+        WortStatistik ws = new WortStatistik(Integer.parseInt(s[1]), Integer.parseInt(s[2]));
+
+        return  new WortTrainer(wl, null, ws);
+    }
+
+    public WortTrainer laden() throws IOException, IllegalArgumentException {
+        return this.laden(this.filename);
     }
 }

@@ -15,12 +15,12 @@ public class WortTrainer {
     /**
      * Konstruktor für die Klasse WortTrainer.
      *
-     * @param wordlist   Die Liste von WortEintrag-Objekten für das Training.
+     * @param wl   Die Liste von WortEintrag-Objekten für das Training.
      * @param cwe Der aktuelle WortEintrag, der im Training verwendet wird.
      * @param ws Der aktuelle WortEintrag, der im Training verwendet wird.
      */
-    public WortTrainer(WortListe wordlist, WortEintrag cwe, WortStatistik ws) {
-        this.wl = wordlist;
+    public WortTrainer(WortListe wl, WortEintrag cwe, WortStatistik ws) {
+        this.wl = wl;
         this.cwe = cwe;
         this.ws = ws;
     }
@@ -85,6 +85,6 @@ public class WortTrainer {
         return false;
     }
     public String toString() {
-        return this.wl.toString()+ "\n--\n"+this.ws.toString();
+        return this.wl.toString()+ "\n-----\n"+this.ws.toString();
     }
 }
