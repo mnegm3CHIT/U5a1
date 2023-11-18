@@ -38,6 +38,24 @@ public class WortListe {
         }
     }
 
+    /**
+     * Fügt ein neues WortEintrag-Objekt zur Liste hinzu.
+     *
+     * @param we der Worteintrag
+     */
+    public void addWord(WortEintrag we) {
+        for (int i = 0; i < woerter.length; i++) {
+            if (woerter[i] == null) {
+                woerter[i] = we;
+                break;
+            }
+            if (i == woerter.length - 1) {
+                this.enlarge(we);
+                break;
+            }
+        }
+    }
+
     public void enlarge(WortEintrag we) {
         WortEintrag[] x = new WortEintrag[woerter.length+1];
 
