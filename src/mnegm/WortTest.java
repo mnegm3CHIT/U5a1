@@ -1,12 +1,14 @@
 package mnegm;
 
+import java.io.IOException;
+
 /**
  * Testet die Methoden der Klassen.
  * @author Maged Negm
  * @version 2023-10-08
  */
 public class WortTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // Testen der Klasse WortEintrag
         WortEintrag eintrag1 = new WortEintrag("Hund", "https://www.beispiel.de/hund");
         System.out.println("WortEintrag 1: " + eintrag1);
@@ -49,5 +51,9 @@ public class WortTest {
             System.out.println("Falsches Wort (ohne Groß-/Kleinschreibung) eingegeben.");
         }
         System.out.println(trainer.getWs().toString());
+
+        WortSL wsl = new WortSL(trainer);
+        wsl.speichern();
+        wsl.laden();
     }
 }

@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class WortSL extends IOException {
     private WortTrainer trainer;
-    private String filename = "WortTrainer.txt";
+    private final String FILENAME = "WortTrainer.txt";
     private String[] liste;
 
     public WortSL(WortTrainer trainer) {
@@ -30,7 +30,7 @@ public class WortSL extends IOException {
     }
 
     public void speichern() throws IOException {
-        speichern(this.filename);
+        speichern(FILENAME);
     }
 
     public WortTrainer laden(String filename) throws IOException, IllegalArgumentException {
@@ -41,10 +41,10 @@ public class WortSL extends IOException {
         if(!file.canRead()){
             throw new IllegalArgumentException("Diese Datei kann nicht gelesen werden! - Du hast nicht die Berechtigung!");
         }
-        String text = null;
+        String text = "";
         try (Scanner s = new Scanner(new BufferedReader(new FileReader(filename)))) {
             while (s.hasNext()) {
-                text += s.next();
+                text += s.nextLine() + "\n";
             }
         }
 
@@ -55,7 +55,10 @@ public class WortSL extends IOException {
         WortListe wl = new WortListe(1);
         for(String ce : e) {
             String[] teil = ce.split(";");
-            wl.addWord(teil[0], teil[1]);
+            if(teil[0].equals("<leer>"))
+                wl.addWord(null);
+            else
+                wl.addWord(teil[0], teil[1]);
         }
 
         WortStatistik ws = new WortStatistik(Integer.parseInt(s[1]), Integer.parseInt(s[2]));
@@ -64,6 +67,6 @@ public class WortSL extends IOException {
     }
 
     public WortTrainer laden() throws IOException, IllegalArgumentException {
-        return this.laden(this.filename);
+        return this.laden(FILENAME);
     }
 }

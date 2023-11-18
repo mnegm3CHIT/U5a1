@@ -85,6 +85,6 @@ public class WortTrainer {
         return false;
     }
     public String toString() {
-        return this.wl.toString()+ "\n-----\n"+this.ws.toString();
+        return this.wl.toString()+ "-----\n"+this.ws.toString();
     }
 }
