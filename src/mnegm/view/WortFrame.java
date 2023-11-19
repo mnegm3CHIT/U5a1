@@ -2,6 +2,12 @@ package mnegm.view;
 
 import javax.swing.*;
 
+
+/**
+ * Das Frame-Klasse des Worttrainers.
+ * @author Maged Negm
+ * @version 2023-11-15
+ */
 public class WortFrame extends JFrame {
     public WortFrame(JPanel WortLayout) {
         this.setTitle("Worttrainer_mnegm3CHIT");
