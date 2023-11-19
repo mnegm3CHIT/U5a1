@@ -2,6 +2,7 @@ package mnegm.view;
 
 import javax.swing.*;
 import java.awt.*;
+import java.net.MalformedURLException;
 
 /**
  * Das Layout-Klasse des Worttrainers.
@@ -112,24 +113,48 @@ public class WortLayout extends JPanel {
         bottom.add(z24);
     }
 
-    public void setTBackground(boolean tf) {
-        TITEL.setBackground(tf == true ? Color.GREEN : Color.RED);
+    public void setEB(boolean tf) {
+        eingabe.setBackground(tf == true ? Color.GREEN : Color.RED);
     }
 
     public String getEingabe() {
         return eingabe.getText();
     }
 
-    public void setPic(JLabel pic) {
-        this.pic = pic;
+    public String getWort() {
+        return wort.getText();
     }
 
-    public void setRz(String text) {
-        rz.setText(text);
+    public String getUrl() {
+        return url.getText();
     }
 
-    public void setAz(String text) {
-        az.setText(text);
+    public void setPic(String picUrl) throws MalformedURLException {
+            ImageIcon icon = new ImageIcon(new URL(picUrl));
+            Image image = icon.getImage();
+            image = image.getScaledInstance(200, 200, Image.SCALE_SMOOTH);
+            pic.setIcon(new ImageIcon(image));
+    }
+
+    public void setW(int rw, int aw, boolean tf) {
+        this.setEB(tf);
+        eingabe.setText("");
+        rz.setText(""+rw);
+        az.setText(""+aw);
+        repaint();
+    }
+
+    public void load(int rw, int aw) {
+        setW(rw,aw,true);
+        eingabe.setBackground(Color.GRAY);
+    }
+
+    public void reset() {
+        eingabe.setBackground(Color.GRAY);
+        eingabe.setText("");
+        rz.setText("0");
+        az.setText("0");
+        repaint();
     }
 
     /**
