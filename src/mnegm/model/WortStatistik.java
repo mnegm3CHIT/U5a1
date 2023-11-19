@@ -1,4 +1,4 @@
-package mnegm;
+package mnegm.model;
 
 /**
  * Die Klasse WortStatistik repräsentiert eine einfache Wortstatistik, die die Anzahl der richtigen (r)

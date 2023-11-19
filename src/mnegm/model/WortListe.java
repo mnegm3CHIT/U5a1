@@ -1,4 +1,4 @@
-package mnegm;
+package mnegm.model;
 
 /**
  * Die Klasse WortListe repräsentiert eine Liste von WortEintrag-Objekten.

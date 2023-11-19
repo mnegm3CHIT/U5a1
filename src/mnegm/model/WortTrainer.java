@@ -1,4 +1,4 @@
-package mnegm;
+package mnegm.model;
 
 import java.util.Random;
 
