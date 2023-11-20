@@ -79,7 +79,6 @@ public class WortLayout extends JPanel {
         save = new JButton("Speichern");
         save.setActionCommand("save");
         save.addActionListener(wc);
-        save.setEnabled(false);
 
         load = new JButton("Laden");
         load.setActionCommand("load");
@@ -104,12 +103,8 @@ public class WortLayout extends JPanel {
         ul.setOpaque(true);
 
         wort = new JTextField();
-        wort.setActionCommand("wort");
-        wort.addActionListener(wc);
 
         url = new JTextField();
-        url.setActionCommand("url");
-        url.addActionListener(wc);
 
         z24.add(wl);
         z24.add(ul);
@@ -156,14 +151,21 @@ public class WortLayout extends JPanel {
 
     public void load(int rw, int aw) {
         setW(rw,aw,true);
-        eingabe.setBackground(Color.GRAY);
+        eingabe.setBackground(Color.WHITE);
+    }
+
+    public void add() {
+        wort.setText("");
+        url.setText("");
     }
 
     public void reset() {
-        eingabe.setBackground(Color.GRAY);
+        eingabe.setBackground(Color.WHITE);
         eingabe.setText("");
         rz.setText("0");
         az.setText("0");
+        wort.setText("");
+        url.setText("");
         repaint();
     }
 

@@ -13,7 +13,6 @@ import java.util.Scanner;
 public class WortSL extends IOException {
     private WortTrainer trainer;
     private final String FILENAME = "C:\\Users\\Maged\\OneDrive\\Schule\\Schuljahr 2022 2024\\SEW\\U5a1\\WortTrainer.txt";
-    private String[] liste;
 
     /**
      * Konstruktor der Klasse WortSL.
@@ -22,7 +21,6 @@ public class WortSL extends IOException {
      */
     public WortSL(WortTrainer trainer) {
         this.trainer = trainer;
-        liste = trainer.toString().split("\n");
     }
 
     /**
@@ -33,6 +31,7 @@ public class WortSL extends IOException {
      * @throws IllegalArgumentException Wenn die Datei nicht existiert oder nicht beschreibbar ist.
      */
     public void speichern(String filename) throws IOException, IllegalArgumentException {
+        String[] liste = trainer.toString().split("\n");
         File file = new File(filename);
         if (!file.exists()) {
             throw new FileNotFoundException("Diese Datei existiert nicht!");
@@ -94,7 +93,7 @@ public class WortSL extends IOException {
 
         WortStatistik ws = new WortStatistik(Integer.parseInt(s[2]), Integer.parseInt(s[3]));
 
-        return new WortTrainer(wl, null, ws);
+        return new WortTrainer(wl, trainer.random(), ws);
     }
 
     /**

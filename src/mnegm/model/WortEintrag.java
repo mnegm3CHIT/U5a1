@@ -31,7 +31,7 @@ public class WortEintrag {
             if (word != null && word.length() >= 2)
                 this.word = word;
             else
-                throw new IllegalArgumentException();
+                throw new IllegalArgumentException("Wort ist ungültig!");
         }
 
     /**

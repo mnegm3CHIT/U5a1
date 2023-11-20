@@ -7,9 +7,12 @@ import mnegm.model.WortTrainer;
 import mnegm.view.WortFrame;
 import mnegm.view.WortLayout;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
 
 public class WortController implements ActionListener {
     private WortLayout wLayout;
@@ -37,7 +40,48 @@ public class WortController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        String ac = e.getActionCommand();
+        switch(ac) {
+            case "input":
+                boolean x = wT.checkIgnoreCase(wLayout.getEingabe());
+                wLayout.setW(wT.getR(),wT.getR()+wT.getF(), x);
+                wLayout.setReset(true);
+                try {
+                    this.wLayout.setPic(this.wT.random().getUrl());
+                } catch (MalformedURLException ex) {
+                    JOptionPane.showMessageDialog(wLayout,"Ungültige URL");
+                }
+                break;
+            case "reset":
+                wLayout.reset();
+                wT = new WortTrainer(wListe, wT.getWortEintrag(), new WortStatistik(0,0));
+                wLayout.setReset(false);
+                break;
+            case "add":
+                wLayout.add();
+               // try {
+                    wListe.addWord(wLayout.getWort(), wLayout.getUrl());
+               // } catch (IllegalArgumentException exc) {
+                  //  JOptionPane.showMessageDialog(wLayout, exc.getMessage());
+               // }
+                break;
+            case "save":
+                try {
+                    wSL.speichern();
+                } catch (IOException | IllegalArgumentException exc) {
+                    JOptionPane.showMessageDialog(wLayout, exc.getMessage());
+                }
+                break;
+            case "load":
+                try {
+                    wT = wSL.laden();
+                } catch (IOException | IllegalArgumentException exc) {
+                    JOptionPane.showMessageDialog(wLayout, exc.getMessage());
+                    break;
+                }
+                wLayout.load(wT.getR(), wT.getR()+wT.getF());
+                wLayout.setReset(true);
+        }
     }
 
     public static void main(String[] args) throws IOException {
