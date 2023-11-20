@@ -1,8 +1,12 @@
 package mnegm.view;
 
+import mnegm.controller.WortController;
+
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URL;
 
 /**
  * Das Layout-Klasse des Worttrainers.
@@ -15,28 +19,31 @@ public class WortLayout extends JPanel {
     private JLabel rl,al, rz, az, pic, wl, ul;
     private final JLabel TITEL = new JLabel("Welches Wort wird unten dargestellt (Eingabe zum Überprüfen)?");
 
-    public WortLayout(WortController wc) {
+    public WortLayout(WortController wc) throws MalformedURLException, IOException {
         this.setLayout(new BorderLayout(5, 5));
 
         //top
         JPanel top = new JPanel();
-        top.setLayout(new GridLayout(1, 2));
+        top.setLayout(new GridLayout(2, 1,0,2));
 
         TITEL.setOpaque(true);
-        TITEL.setHorizontalAlignment(SwingConstants.LEFT);
+        TITEL.setFont(new Font(TITEL.getFont().getName(), TITEL.getFont().ITALIC, 15));
+
 
         eingabe = new JTextField();
+        eingabe.setOpaque(true);
         eingabe.setActionCommand("input");
-        eingabe.setFont(new Font(eingabe.getFont().getName(), eingabe.getFont().BOLD, 10));
+        eingabe.setFont(new Font(TITEL.getFont().getName(), eingabe.getFont().BOLD, 18));
         eingabe.addActionListener(wc);
 
         top.add(TITEL);
         top.add(eingabe);
-        this.add(top, BorderLayout.PAGE_START);
+        this.add(top, BorderLayout.NORTH);
 
 
         //center
-        this.add(pic, BorderLayout.CENTER);
+        this.pic = new JLabel("", SwingConstants.CENTER);
+        this.add(this.pic, BorderLayout.CENTER);
 
 
         //bottom
@@ -65,18 +72,18 @@ public class WortLayout extends JPanel {
         reset.addActionListener(wc);
         reset.setEnabled(false);
 
-        reset = new JButton("Wort hinzufügen");
-        reset.setActionCommand("add");
-        reset.addActionListener(wc);
+        add = new JButton("Wort hinzufügen");
+        add.setActionCommand("add");
+        add.addActionListener(wc);
 
         save = new JButton("Speichern");
         save.setActionCommand("save");
         save.addActionListener(wc);
         save.setEnabled(false);
 
-        save = new JButton("Laden");
-        save.setActionCommand("load");
-        save.addActionListener(wc);
+        load = new JButton("Laden");
+        load.setActionCommand("load");
+        load.addActionListener(wc);
 
         z12.add(rl);
         z12.add(rz);
@@ -88,7 +95,7 @@ public class WortLayout extends JPanel {
         z12.add(load);
 
         JPanel z24 = new JPanel();
-        z24.setLayout(new GridLayout(2,2,2,2));
+        z24.setLayout(new GridLayout(2,2,2,0));
 
         wl = new JLabel("Neues Wort");
         wl.setOpaque(true);
@@ -111,6 +118,8 @@ public class WortLayout extends JPanel {
 
         bottom.add(z12);
         bottom.add(z24);
+
+        this.add(bottom, BorderLayout.SOUTH);
     }
 
     public void setEB(boolean tf) {
@@ -130,10 +139,11 @@ public class WortLayout extends JPanel {
     }
 
     public void setPic(String picUrl) throws MalformedURLException {
-            ImageIcon icon = new ImageIcon(new URL(picUrl));
-            Image image = icon.getImage();
-            image = image.getScaledInstance(200, 200, Image.SCALE_SMOOTH);
-            pic.setIcon(new ImageIcon(image));
+
+        ImageIcon icon = new ImageIcon(new URL(picUrl));
+        Image image = icon.getImage();
+        image = image.getScaledInstance(icon.getIconWidth()/3, icon.getIconHeight()/3, Image.SCALE_SMOOTH);
+        pic.setIcon(new ImageIcon(image));
     }
 
     public void setW(int rw, int aw, boolean tf) {
