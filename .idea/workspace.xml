@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ce7e254-b778-41f8-b32b-461a4345870b" name="Changes" comment="Wortpattern für regex verbessert">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9ce7e254-b778-41f8-b32b-461a4345870b" name="Changes" comment="Wortstatistik als attribute hinzugefügt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mnegm/WortSL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mnegm/WortSL.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +61,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.WortTest">
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="mnegm.Main" />
       <module name="U5a1" />
@@ -72,11 +70,11 @@
       </method>
     </configuration>
     <configuration name="WortTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="mnegm.WortTest" />
+      <option name="MAIN_CLASS_NAME" value="mnegm.model.WortTest" />
       <module name="U5a1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="mnegm.*" />
+          <option name="PATTERN" value="mnegm.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -86,8 +84,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WortTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.WortTest" />
       </list>
     </recent_temporary>
   </component>
@@ -123,7 +121,10 @@
       <workItem from="1700068130978" duration="3604000" />
       <workItem from="1700126592306" duration="4775000" />
       <workItem from="1700254121034" duration="1357000" />
-      <workItem from="1700322618320" duration="14227000" />
+      <workItem from="1700322618320" duration="15834000" />
+      <workItem from="1700393660003" duration="11015000" />
+      <workItem from="1700430098912" duration="17892000" />
+      <workItem from="1700464710170" duration="2443000" />
     </task>
     <task id="LOCAL-00001" summary="Anfang">
       <option name="closed" value="true" />
@@ -280,7 +281,91 @@
       <option name="project" value="LOCAL" />
       <updated>1700339148657</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Domkumentationskommentare">
+      <created>1700340169846</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1700340169846</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Einrückungen">
+      <created>1700340268237</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1700340268237</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Einrückungen">
+      <created>1700340286231</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1700340286231</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Klassen bewegt in neue Packages, WortPanel und WortFrame Klasse erstellt">
+      <created>1700395064254</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1700395064254</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Konstruktor der Frame-klasse erstellt">
+      <created>1700395269306</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1700395269306</updated>
+    </task>
+    <task id="LOCAL-00028" summary="WortLayout erstellt mit setter-Methoden und getter">
+      <created>1700430286319</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1700430286319</updated>
+    </task>
+    <task id="LOCAL-00029" summary="getter für neues Wort und Url, settter für Bild, setter für Wörteranzahl, laden und speichern Methode">
+      <created>1700432957728</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1700432957728</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Controller klasse erstellt und Konstruktor erstellt">
+      <created>1700439257171</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1700439257171</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Controller klasse erstellt und Konstruktor erstellt">
+      <created>1700439267684</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1700439267684</updated>
+    </task>
+    <task id="LOCAL-00032" summary="actionPerformed erstellt + verfeinerungen">
+      <created>1700446251438</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1700446251438</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Dokumentationskommentare">
+      <created>1700448012470</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1700448012470</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Wortstatistik als attribute hinzugefügt">
+      <created>1700466819842</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1700466819842</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,13 +410,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Anfang" />
-    <MESSAGE value="WortEintrag, WortListe und WortTrainer erstellt und definiert" />
-    <MESSAGE value="WortEintrag, WortListe und WortTrainer Dokumentationskommentare gemacht" />
-    <MESSAGE value="checkUrl verbessert" />
-    <MESSAGE value="toString verbessert" />
-    <MESSAGE value="try catch entfernt in WortEintrag" />
-    <MESSAGE value="Testklasse erstellen, addWord verbessert, enlarge Methode hinzugefügt," />
     <MESSAGE value="Testklasse umbenannt auf WortTest" />
     <MESSAGE value="Variablen besser benannt" />
     <MESSAGE value="Worttrainer_Schritt2: WortStatistik erttellt" />
@@ -347,7 +425,17 @@
     <MESSAGE value="addWord mit Worteintrag-Parameter hinzugefügt" />
     <MESSAGE value="WortTest erweitert, Funktionalität bei null-Worteinträgen hinzugefügt" />
     <MESSAGE value="Wortpattern für regex verbessert" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wortpattern für regex verbessert" />
+    <MESSAGE value="Domkumentationskommentare" />
+    <MESSAGE value="Einrückungen" />
+    <MESSAGE value="Klassen bewegt in neue Packages, WortPanel und WortFrame Klasse erstellt" />
+    <MESSAGE value="Konstruktor der Frame-klasse erstellt" />
+    <MESSAGE value="WortLayout erstellt mit setter-Methoden und getter" />
+    <MESSAGE value="getter für neues Wort und Url, settter für Bild, setter für Wörteranzahl, laden und speichern Methode" />
+    <MESSAGE value="Controller klasse erstellt und Konstruktor erstellt" />
+    <MESSAGE value="actionPerformed erstellt + verfeinerungen" />
+    <MESSAGE value="Dokumentationskommentare" />
+    <MESSAGE value="Wortstatistik als attribute hinzugefügt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wortstatistik als attribute hinzugefügt" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
