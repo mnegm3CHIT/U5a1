@@ -27,6 +27,7 @@ public class WortController implements ActionListener {
     private WortSL wSL;
     private WortTrainer wT;
     private WortListe wListe;
+    private WortStatistik wS;
 
     /**
      * Konstruktor für die Klasse WortController. Initialisiert die erforderlichen Komponenten und setzt den Anfangszustand.
@@ -37,7 +38,8 @@ public class WortController implements ActionListener {
         wLayout = new WortLayout(this);
         wF = new WortFrame(wLayout);
         wListe = new WortListe(1);
-        wT = new WortTrainer(wListe, null, new WortStatistik(0,0));
+        wS = new WortStatistik(0,0);
+        wT = new WortTrainer(wListe, null, wS);
         wSL = new WortSL(wT);
 
         wListe.addWord("Hund", "https://img.freepik.com/fotos-kostenlos/lokalisiertes-glueckliches-laechelndes-hundeweisser-hintergrund-portrait-4_1562-693.jpg?w=1060&t=st=1700434653~exp=1700435253~hmac=bafea2bf787ea69da171151aa96d55065be5cf1a90fe3fe0542dc6457234e8cc");
@@ -61,7 +63,7 @@ public class WortController implements ActionListener {
         switch(ac) {
             case "input":
                 boolean x = wT.checkIgnoreCase(wLayout.getEingabe());
-                wLayout.setW(wT.getR(),wT.getR()+wT.getF(), x);
+                wLayout.setW(wS.getR(),wS.getTotal(), x);
                 wLayout.setReset(true);
                 try {
                     this.wLayout.setPic(this.wT.random().getUrl());
@@ -71,7 +73,7 @@ public class WortController implements ActionListener {
                 break;
             case "reset":
                 wLayout.reset();
-                wT = new WortTrainer(wListe, wT.getWortEintrag(), new WortStatistik(0,0));
+                wS = new WortStatistik(0,0);
                 wLayout.setReset(false);
                 break;
             case "add":
@@ -92,11 +94,12 @@ public class WortController implements ActionListener {
             case "load":
                 try {
                     wT = wSL.laden();
+                    wS = wT.getWs();
                 } catch (IOException | IllegalArgumentException exc) {
                     JOptionPane.showMessageDialog(wLayout, exc.getMessage());
                     break;
                 }
-                wLayout.load(wT.getR(), wT.getR()+wT.getF());
+                wLayout.load(wS.getR(), wS.getTotal());
                 wLayout.setReset(true);
         }
     }

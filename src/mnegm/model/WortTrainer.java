@@ -56,24 +56,6 @@ public class WortTrainer {
     }
 
     /**
-     * Gibt die aktuelle WortStatistik zurück, der im Training verwendet wird.
-     *
-     * @return Die aktuelle WortStatistik.
-     */
-    public int getR() {
-        return ws.getR();
-    }
-
-    /**
-     * Gibt die aktuelle WortStatistik zurück, der im Training verwendet wird.
-     *
-     * @return Die aktuelle WortStatistik.
-     */
-    public int getF() {
-        return ws.getF();
-    }
-
-    /**
      * Überprüft, ob das gegebene Wort mit dem Wort im aktuellen WortEintrag übereinstimmt (Groß-/Kleinschreibung beachten).
      *
      * @param word Das zu überprüfende Wort.
