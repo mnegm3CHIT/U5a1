@@ -31,7 +31,6 @@ public class WortSL extends IOException {
      * @throws IllegalArgumentException Wenn die Datei nicht existiert oder nicht beschreibbar ist.
      */
     public void speichern(String filename) throws IOException, IllegalArgumentException {
-        String[] liste = trainer.toString().split("\n");
         File file = new File(filename);
         if (!file.exists()) {
             throw new FileNotFoundException("Diese Datei existiert nicht!");
@@ -40,9 +39,7 @@ public class WortSL extends IOException {
             throw new IllegalArgumentException("In diese Datei kann nicht geschrieben werden! - Du hast nicht die Berechtigung!");
         }
         try (PrintWriter ops = new PrintWriter(filename)) {
-            for (String e : liste) {
-                ops.println(e);
-            }
+            ops.println(trainer.toString());
         }
     }
 
