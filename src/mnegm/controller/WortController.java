@@ -14,6 +14,13 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
+/**
+ * Die Klasse WortController fungiert als Controller im MVC (Model-View-Controller)-Architekturmuster für die WortTrainer-Anwendung.
+ * Sie behandelt Benutzereingaben, interagiert mit den Model-Klassen (WortListe, WortTrainer, WortStatistik) und aktualisiert die Ansicht (WortLayout).
+ *
+ * @author Maged Negm
+ * @version 2023-11-19
+ */
 public class WortController implements ActionListener {
     private WortLayout wLayout;
     private WortFrame wF;
@@ -21,6 +28,11 @@ public class WortController implements ActionListener {
     private WortTrainer wT;
     private WortListe wListe;
 
+    /**
+     * Konstruktor für die Klasse WortController. Initialisiert die erforderlichen Komponenten und setzt den Anfangszustand.
+     *
+     * @throws IOException wenn ein E/A-Fehler beim Initialisieren der Komponenten auftritt.
+     */
     public WortController() throws IOException {
         wLayout = new WortLayout(this);
         wF = new WortFrame(wLayout);
@@ -38,6 +50,11 @@ public class WortController implements ActionListener {
         wLayout.setPic(wT.random().getUrl());
     }
 
+    /**
+     * Behandelt Action-Events, die durch Benutzerinteraktionen ausgelöst werden. Implementiert das ActionListener-Interface.
+     *
+     * @param e Das ActionEvent-Objekt, das die Aktion des Benutzers repräsentiert.
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         String ac = e.getActionCommand();

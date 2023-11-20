@@ -19,6 +19,13 @@ public class WortLayout extends JPanel {
     private JLabel rl,al, rz, az, pic, wl, ul;
     private final JLabel TITEL = new JLabel("Welches Wort wird unten dargestellt (Eingabe zum Überprüfen)?");
 
+    /**
+     * Konstruktor der Klasse WortLayout.
+     *
+     * @param wc Der zugehörige WortController.
+     * @throws MalformedURLException Wenn eine ungültige URL erstellt wird.
+     * @throws IOException Wenn ein E/A-Fehler auftritt.
+     */
     public WortLayout(WortController wc) throws MalformedURLException, IOException {
         this.setLayout(new BorderLayout(5, 5));
 
@@ -117,22 +124,48 @@ public class WortLayout extends JPanel {
         this.add(bottom, BorderLayout.SOUTH);
     }
 
+    /**
+     * Setzt das Hintergrundfarbe des Eingabefeldes basierend auf der Überprüfung auf richtig oder falsch.
+     *
+     * @param tf true für richtig (grüne Hintergrundfarbe), false für falsch (rote Hintergrundfarbe).
+     */
     public void setEB(boolean tf) {
         eingabe.setBackground(tf == true ? Color.GREEN : Color.RED);
     }
 
+    /**
+     * Gibt den Inhalt des Eingabefeldes zurück.
+     *
+     * @return Der Inhalt des Eingabefeldes.
+     */
     public String getEingabe() {
         return eingabe.getText();
     }
 
+    /**
+     * Gibt den Inhalt des Wort-Textfeldes zurück.
+     *
+     * @return Der Inhalt des Wort-Textfeldes.
+     */
     public String getWort() {
         return wort.getText();
     }
 
+    /**
+     * Gibt den Inhalt des URL-Textfeldes zurück.
+     *
+     * @return Der Inhalt des URL-Textfeldes.
+     */
     public String getUrl() {
         return url.getText();
     }
 
+    /**
+     * Setzt das Bild im Layout basierend auf der übergebenen Bild-URL.
+     *
+     * @param picUrl Die URL des Bildes.
+     * @throws MalformedURLException Wenn die URL ungültig ist.
+     */
     public void setPic(String picUrl) throws MalformedURLException {
 
         ImageIcon icon = new ImageIcon(new URL(picUrl));
@@ -141,6 +174,13 @@ public class WortLayout extends JPanel {
         pic.setIcon(new ImageIcon(image));
     }
 
+    /**
+     * Setzt die Anzeige für richtige und insgesamt geprüfte Wörter sowie das Eingabefeld basierend auf der Überprüfung.
+     *
+     * @param rw Die Anzahl der richtigen Wörter.
+     * @param aw Die Anzahl der insgesamt geprüften Wörter.
+     * @param tf true für richtig, false für falsch.
+     */
     public void setW(int rw, int aw, boolean tf) {
         this.setEB(tf);
         eingabe.setText("");
@@ -149,16 +189,28 @@ public class WortLayout extends JPanel {
         repaint();
     }
 
+    /**
+     * Lädt die Anzeige für richtige und insgesamt geprüfte Wörter und setzt das Eingabefeld auf den Ursprungszustand.
+     *
+     * @param rw Die Anzahl der richtigen Wörter.
+     * @param aw Die Anzahl der insgesamt geprüften Wörter.
+     */
     public void load(int rw, int aw) {
         setW(rw,aw,true);
         eingabe.setBackground(Color.WHITE);
     }
 
+    /**
+     * Setzt die Textfelder für das neue Wort und die neue URL auf den Ursprungszustand.
+     */
     public void add() {
         wort.setText("");
         url.setText("");
     }
 
+    /**
+     * Setzt alle Komponenten auf den Ursprungszustand zurück.
+     */
     public void reset() {
         eingabe.setBackground(Color.WHITE);
         eingabe.setText("");
