@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class WortSL extends IOException {
     private WortTrainer trainer;
-    private final String FILENAME = "C:\\Users\\Maged\\OneDrive\\Schule\\Schuljahr 2022 2024\\SEW\\U5a1\\WortTrainer.txt";
+    private final String FILENAME = "C:\\Users\\Maged\\OneDrive - tgm - Die Schule der Technik (1)\\Schule\\Schuljahr 2022 2024\\SEW\\U5a1\\WortTrainer.txt";
 
     /**
      * Konstruktor der Klasse WortSL.

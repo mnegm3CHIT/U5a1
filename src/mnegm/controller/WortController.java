@@ -77,14 +77,15 @@ public class WortController implements ActionListener {
                 wLayout.setReset(false);
                 break;
             case "add":
+               try {
+                   wListe.addWord(wLayout.getWort(), wLayout.getUrl());
+               } catch (IllegalArgumentException exc) {
+                   JOptionPane.showMessageDialog(wLayout, exc.getMessage());
+               }
                 wLayout.add();
-               // try {
-                    wListe.addWord(wLayout.getWort(), wLayout.getUrl());
-               // } catch (IllegalArgumentException exc) {
-                  //  JOptionPane.showMessageDialog(wLayout, exc.getMessage());
-               // }
                 break;
             case "save":
+                wSL = new WortSL(wT);
                 try {
                     wSL.speichern();
                 } catch (IOException | IllegalArgumentException exc) {

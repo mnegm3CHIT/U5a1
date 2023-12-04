@@ -25,7 +25,7 @@ public class WortListe {
      * @param word Das Wort für den Eintrag.
      * @param url  Die URL für den Eintrag.
      */
-    public void addWord(String word, String url) {
+    public void addWord(String word, String url) throws IllegalArgumentException {
         for (int i = 0; i < woerter.length; i++) {
             if (woerter[i] == null) {
                 woerter[i] = new WortEintrag(word, url);

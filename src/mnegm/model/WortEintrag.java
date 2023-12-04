@@ -17,7 +17,7 @@ public class WortEintrag {
      * @param word Das Wort für den Eintrag.
      * @param url  Die URL für den Eintrag.
      */
-    public WortEintrag(String word, String url) {
+    public WortEintrag(String word, String url) throws IllegalArgumentException {
         this.setWord(word);
         this.setUrl(url);
     }
@@ -27,7 +27,7 @@ public class WortEintrag {
      *
      * @param word Das Wort für den Eintrag.
      */
-    public void setWord(String word) {
+    public void setWord(String word) throws IllegalArgumentException {
             if (word != null && word.length() >= 2)
                 this.word = word;
             else
@@ -40,10 +40,10 @@ public class WortEintrag {
      * @param url Die URL für den Eintrag.
      */
     public void setUrl(String url) {
-           // if (checkURL(url))
-                this.url = url;
-            //else
-                //throw new IllegalArgumentException();
+        if (checkURL(url))
+            this.url = url;
+        else
+            throw new IllegalArgumentException();
     }
 
     /**
@@ -53,7 +53,7 @@ public class WortEintrag {
      * @return true, wenn die URL den Anforderungen entspricht, ansonsten false.
      */
     public static boolean checkURL(String url) {
-        String pattern = "^(http://|https://)[a-zA-Z]+\\.[a-zA-Z]+\\.[a-zA-Z]+/[a-zA-Z/_\\-=&]+$";
+        String pattern = "^(http://|https://)[a-zA-Z]+\\.[a-zA-Z]+\\.[a-zA-Z]+/[a-zA-Z0-9/_\\-\\.?~=&]+$";
         return url.matches(pattern);
     }
 
