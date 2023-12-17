@@ -39,11 +39,11 @@ public class WortEintrag {
      *
      * @param url Die URL für den Eintrag.
      */
-    public void setUrl(String url) {
+    public void setUrl(String url) throws IllegalArgumentException {
         if (checkURL(url))
             this.url = url;
         else
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("URL ist ungültig!");
     }
 
     /**
@@ -53,7 +53,7 @@ public class WortEintrag {
      * @return true, wenn die URL den Anforderungen entspricht, ansonsten false.
      */
     public static boolean checkURL(String url) {
-        String pattern = "^(http://|https://)[a-zA-Z]+\\.[a-zA-Z]+\\.[a-zA-Z]+/[a-zA-Z0-9/_\\-\\.?~=&]+$";
+        String pattern = "^(http://|https://)[a-zA-Z]+\\.[a-zA-Z\\-]+\\.[a-zA-Z]+/[a-zA-Z0-9/_\\-\\.?~=&!\"§$%&/()*+~';,:|<>{}\\[\\]#@€µ´`°]+$";
         return url.matches(pattern);
     }
 

@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ce7e254-b778-41f8-b32b-461a4345870b" name="Changes" comment="Wortstatistik als attribute hinzugefügt">
+    <list default="true" id="9ce7e254-b778-41f8-b32b-461a4345870b" name="Changes" comment="Exceptions in kopfzeile angegeben">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/design/Ue5a_4_Worttrainer4_uml.asta" beforeDir="false" afterPath="$PROJECT_DIR$/src/design/Ue5a_4_Worttrainer4_uml.asta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mnegm/model/WortEintrag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mnegm/model/WortEintrag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mnegm/model/WortTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mnegm/model/WortTrainer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -436,6 +439,17 @@
     <MESSAGE value="Dokumentationskommentare" />
     <MESSAGE value="Wortstatistik als attribute hinzugefügt" />
     <option name="LAST_COMMIT_MESSAGE" value="Wortstatistik als attribute hinzugefügt" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/mnegm/model/WortTrainer.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
